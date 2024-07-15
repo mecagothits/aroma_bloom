@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Aroma Bloom - Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        main {
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Shop.html">SHOP</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="contact_us.html">CONTACT US</a></li>
+            </ul>
+            <div class="logo">
+                <img src="Images/logo.png" alt="Aroma Bloom">
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <i class="fa-regular fa-user"></i>
+                <a href="Login.html"><button class="login-btn">LOG IN</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="cart-container">
+                <div class="cart-items">
+                    <h2>CART</h2>
+                    <div class="cart-header">
+                        <span>Product</span>
+                        <span>Quantity</span>
+                        <span>Price</span>
+                        <span></span>
+                    </div>
+                    <div class="cart-item">
+                        <img alt="Mixed Berry scented candle in a glass jar with berries" src="Images/mixed_berry.png" width="80" height="80"/>
+                        <span class="item-name">Mixed Berry</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn">-</button>
+                            <span>1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <span class="item-price">$30</span>
+                        <i class="fas fa-trash remove-item"></i>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <h2>Cart Total</h2>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Sub total</span>
+                            <span>$20</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Discount</span>
+                            <span>-$10</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>$20</span>
+                        </div>
+                    </div>
+                    <a href="accountdetails.html"><button class="checkout-btn">CHECKOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="features">
+        <div class="container features-container">
+            <div class="feature">
+                <i class="fas fa-trophy"></i>
+                <h3>High Quality</h3>
+                <p>crafted from top materials</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3>Free Shipping</h3>
+                <p>Order over $100</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>24 / 7 Support</h3>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Images/logo-w.png" alt="Aroma Bloom">
+            </div>
+            <div class="footer-links">
+                <a href="testimonials.html">NEW ARRIVALS</a>
+                <a href="about.html">ABOUT</a>
+                <a href="#">BLOG</a>
+                <a href="testimonials.html">TESTIMONIALS</a>
+                <a href="contact_us.html">CONTACT US</a>
+            </div>
+            <div class="footer-links2">
+                <a href="#">FACEBOOK</a>
+                <a href="#">INSTAGRAM</a>
+                <a href="#">LINKEDIN</a>
+            </div>
+            <div class="newsletter">
+                <p>Stay informed — we'll send you exclusive offers and updates</p>
+                <button class="signup-btn"><a href="SignUp.html">SIGN UP</a> </button>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aroma Bloom. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

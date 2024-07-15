@@ -1,0 +1,376 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Aroma Bloom - Candle Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf7f2;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .icons a {
+            margin-left: 15px;
+            color: #333;
+        }
+        .hero {
+            display: flex;
+            position: relative;
+        }
+        .hero-image {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 50%;
+            height: calc(100% + 100px);
+            overflow: hidden;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-text {
+            flex: 1;
+            padding: 50px;
+            margin-left: 50%;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #d4a373;
+        }
+        .btn {
+            /* background-color: #333; */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #0C0D12;
+        }
+
+        .login-btn {
+            /* background-color: #333; */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .products {
+            padding: 50px;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .price {
+            font-weight: bold;
+        }
+        .add-to-cart {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .feature {
+            padding: 50px;
+            text-align: center;
+        }
+        .feature-image {
+            width: 100%;
+            max-width: 800px;
+        }
+        .feature-text {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .qualities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 50px;
+        }
+        .quality {
+            display: flex;
+        }
+        .quality-image {
+            flex: 1;
+        }
+        .quality-text {
+            flex: 1;
+            padding: 20px;
+        }
+        .fragrance-room {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .fragrance-room img {
+            width: 100%;
+        }
+        .fragrance-room-text {
+            position: absolute;
+            bottom: 260px;
+            left: 570px;
+        }
+
+
+        .fragrance-room h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+        background-color: #0C0D12;
+        color: #fff;
+        margin-top: 30px;
+        padding: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+            align-items: flex-start; /* Align items to the top */
+            gap: 100px; /* Adjust gap between columns */
+            flex-wrap: wrap;
+        }
+
+        .footer-logo img {
+            height: 200px;
+            width: 180px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-links2 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-links2 a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .newsletter {
+            text-align: center;
+            padding-left: 250px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .signup-btn {
+            background-color: #0C0D12;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border-color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Shop.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#">BLOG</a>
+            <a href="testimonials.html">TESTIMONIALS</a>
+        </nav>
+        <div class="logo">
+            <img src="src/logo.png" alt="Aroma Bloom logo - A stylized candle flame icon" width="100" height="90">
+        </div>
+        <div class="icons">
+            <a href="#search"><i class="fas fa-search"></i></a>
+            <a href="#account"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="Login.html" class="login-btn">Log in</a>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-image">
+            <img src="src/Image.png" alt="A lit candle in a glass jar surrounded by pine cones and evergreen branches on a cozy fabric">
+        </div>
+        <div class="hero-text">
+            <p>#CANDLEEXPERIENCE</p>
+            <h1>A range of <span class="highlight">candles</span> are offered to constantly calm and soothe your emotions.</h1>
+            <a href="#products" class="btn">DISCOVER PRODUCTS</a>
+        </div>
+    </section>
+    <section class="products">
+        <h2>Shop our popular candle products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="src/Picture.png" alt="Vanilla & Cocoa Bean scented candle in a white jar" width="200" height="200">
+                <h3>Vanilla & Cocoa Bean</h3>
+                <p class="price">$35</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="src/Picture 1.png" alt="Citrus Bergamot scented candle in a yellow jar" width="200" height="200">
+                <h3>Citrus Bergamot</h3>
+                <p class="price">$35</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="src/Picture 2.png" alt="Mixed Berry scented candle in a pink jar" width="200" height="200">
+                <h3>Mixed Berry</h3>
+                <p class="price">$35</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="src/Picture 3.png" alt="Island Spa scented candle in a light blue jar" width="200" height="200">
+                <h3>Island Spa</h3>
+                <p class="price">$34</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+    <section class="feature">
+   <img alt="Multiple lit candles in various sizes arranged with dried flowers and foliage" class="feature-image" height="400" src="src/Mask group.png" width="800"/>
+   <div class="feature-text">
+    <p>
+     We use high-quality materials to ensure you receive an excellent product.
+    </p>
+   </div>
+  </section>
+  <section class="qualities">
+   <div class="quality">
+    <div class="quality-image">
+     <img alt="Several gray concrete candle containers with minimalist labels" height="300" src="src/Rectangle 2393.png" width="300"/>
+    </div>
+    <div class="quality-text">
+     <h3>
+      Durable
+     </h3>
+     <p>
+      Even after six months of burning, the candle continues to emit its fragrance.
+     </p>
+    </div>
+   </div>
+   <div class="quality">
+    <div class="quality-image">
+     <img alt="A lit candle in a concrete container with a ripple effect on the surface" height="300" src="src/Rectangle 2393.png" width="300"/>
+    </div>
+   </div>
+   <div class="quality">
+    <div class="quality-image">
+     <img alt="A person's hand holding a lit candle in a glass jar" height="300" src="src/Masking Group.png" width="300"/>
+    </div>
+   </div>
+   <div class="quality">
+    <div class="quality-text">
+     <h3>
+      Calm
+     </h3>
+     <p>
+      The soothing aroma of the candles creates a calming atmosphere, and they are remarkably long-lasting.
+     </p>
+    </div>
+    <div class="quality-image">
+     <img alt="An open book with a lit candle and a cozy blanket in the background" height="300" src="src/Masking Group 1.png" width="300"/>
+    </div>
+   </div>
+  </section>
+  <section class="fragrance-room">
+   <img alt="Multiple pillar candles of varying heights lit on a dark surface" height="600" src="src/Highlight Product.png" width="1200"/>
+   <div class="fragrance-room-text">
+    <h2>
+     Fragrance Room
+    </h2>
+    <a class="btn" href="#find-product">
+     FIND PRODUCT
+    </a>
+   </div>
+  </section>
+  <footer style="margin-top: 0px;">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="src/logo-w.png" alt="Aroma Bloom">
+        </div>
+        <div class="footer-links">
+            <a href="Shop.html">NEW ARRIVALS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#">BLOG</a>
+            <a href="testimonials.html">INFLUENCER</a>
+            <a href="contact_us.html">CONTACT US</a>
+        </div>
+        <div class="footer-links2">
+            <a href="#">FACEBOOK</a>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">LINKEDIN</a>
+        </div>
+        <div class="newsletter">
+            <p>Stay informed — we'll send you exclusive offers and updates</p>
+            <button class="signup-btn">SIGN UP</button>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Aroma Bloom. All rights reserved.</p>
+    </div>
+</footer>
+ </body>
+</html>
